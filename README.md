@@ -1,23 +1,36 @@
 # SmartFoodSupplyChainMonitoringSystem
 
-This advises the ideal storage temperature for food items based on the current temperature readings from an Arduino and optimal food storage temperatures using OpenAI's GPT-3.5 model.
+This advises the ideal storage temperature for food items based on the current environment temperature readings from an Arduino and optimal food storage temperatures using OpenAI's GPT-3.5 model.
 
 ## Features
-Temperature Monitoring: Reads temperature data from an Arduino connected via a serial port.
 
-OpenAI Integration: Uses OpenAI's GPT-3.5 to generate advice on the ideal storage temperature for a given food item.
+Temperature Reading:
+-The DHT11 Temprature sensor reads 20 temperature values from the Arduino and calculates the median temperature.
 
-Text-to-Speech: Converts the OpenAI response into speech using EdgeTTS.
+OpenAI Integration:
+-The median temperature and a user-provided food item are sent to OpenAI's GPT-3.5 model.
+-OpenAI generates a response with advice on the ideal storage temperature for the food item.
 
-Multilingual Support: Supports multiple languages (English, Spanish, French) for text-to-speech output.
+Text-to-Speech:
+-The OpenAI response is converted into speech using EdgeTTS.
+-The speech is generated in the selected language (English, Spanish, or French).
 
-Gradio Interface: Provides a web-based interface for easy interaction.
+Gradio Interface:
+-Users can interact with the system via a web-based interface.
+-Enter a food item and select a language to get advice on its storage temperature.
+
+## Configuration
+OpenAI API Key: Set the OPENAI_API_KEY environment variable with your OpenAI API key.
+
+Serial Port: Update the ser = serial.Serial('COM3', 9600) line in app.py with the correct serial port for your Arduino.
+
+Languages: The system supports English (en), Spanish (es), and French (fr). You can add more languages by updating the voice_mapping dictionary in the text_to_speech function.
 
 ## Requirements
 - Python 3.7+
 - Libraries: `gradio`, `openai`, `pyserial`, `edge_tts`, `statistics`, `uuid`, `asyncio`, `os`
 
 ## Installation
-1. Clone the repository:
+Clone the repository:
    ```bash
    git clone https://github.com/Chaitanya-Kante/SmartFoodSupplyChainMonitoringSystem.git
