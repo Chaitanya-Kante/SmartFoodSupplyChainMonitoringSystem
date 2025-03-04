@@ -1,6 +1,6 @@
 # SmartFoodSupplyChainMonitoringSystem
 
-This is a Gradio app that advises the ideal storage temperature for food items based on the current temperature readings from an Arduino and OpenAI's GPT-3.5 model.
+This advises the ideal storage temperature for food items based on the current temperature readings from an Arduino and optimal food storage temperatures using OpenAI's GPT-3.5 model.
 
 ## Features
 Temperature Monitoring: Reads temperature data from an Arduino connected via a serial port.
