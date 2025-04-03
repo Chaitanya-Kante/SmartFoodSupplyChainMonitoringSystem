@@ -34,3 +34,6 @@ The system supports English (`en`), Spanish (`es`), and French (`fr`). You can a
 - Python 3.7+
 - Libraries: `gradio`, `openai`, `pyserial`, `edge_tts`, `statistics`, `uuid`, `asyncio`, `os`
 
+  [Check out this project video](https://www.canva.com/design/DAGgvZURZOU/To5OU8lPSHAQKh28BRd0LA/view?utm_content=DAGgvZURZOU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hebe2b42824)
+
+
